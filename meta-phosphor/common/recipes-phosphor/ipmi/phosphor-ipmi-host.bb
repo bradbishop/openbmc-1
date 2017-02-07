@@ -11,6 +11,7 @@ inherit obmc-phosphor-sdbus-service
 inherit obmc-phosphor-ipmiprovider-symlink
 
 DEPENDS += "phosphor-mapper"
+DEPENDS += "phosphor-logging"
 DEPENDS += "autoconf-archive-native"
 RDEPENDS_${PN}-dev += "phosphor-mapper-dev"
 RDEPENDS_${PN} += "clear-once"
@@ -18,9 +19,11 @@ RDEPENDS_${PN} += "network"
 RDEPENDS_${PN} += "libmapper"
 RDEPENDS_${PN} += "phosphor-time-manager"
 RRECOMMENDS_${PN} += "virtual-obmc-settings-mgmt"
-SRC_URI += "git://github.com/openbmc/phosphor-host-ipmid"
+#SRC_URI += "git://github.com/openbmc/phosphor-host-ipmid"
+SRC_URI += "git://github.com/anoo1/phosphor-host-ipmid"
 
-SRCREV = "8485aa119e8809c7da059a6ff137aefe6c4680fb"
+#SRCREV = "8485aa119e8809c7da059a6ff137aefe6c4680fb"
+SRCREV = "4465e5b9cff849d5056d6ef2c84386ab24033737"
 
 S = "${WORKDIR}/git"
 
